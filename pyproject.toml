@@ -52,7 +52,7 @@ benchmark = [
 ]
 
 [project.urls]
-Repository = "https://github.com/thabangbaloyi/dnnmcshap"
+Repository = "https://github.com/thabangTheActuaryCoder/dnnmcshap"
 
 [tool.setuptools.packages.find]
 where = ["src"]
