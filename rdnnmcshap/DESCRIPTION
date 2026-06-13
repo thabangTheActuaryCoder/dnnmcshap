@@ -1,0 +1,24 @@
+Package: rdnnmcshap
+Title: DNN-Monte Carlo-Shapley Framework for Health Insurance Cost Analysis
+Version: 0.1.0
+Authors@R:
+    person("Thabang Bongani Junior", "Baloyi",
+           email = "2015015486@ufs4life.ac.za",
+           role = c("aut", "cre"))
+Description: R interface to the dnnmcshap Python package via reticulate.
+    Implements a three-stage framework combining Deep Neural Network
+    prediction, Monte Carlo simulation and Shapley value attribution
+    for understanding health insurance cost drivers.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+    reticulate (>= 1.28)
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+SystemRequirements: Python (>= 3.10), dnnmcshap Python package

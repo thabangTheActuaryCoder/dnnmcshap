@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the dissertation below."
+title: "dnnmcshap"
+version: 0.1.0
+type: software
+authors:
+  - given-names: Thabang Bongani Junior
+    family-names: Baloyi
+    affiliation: University of the Free State
+    orcid: ""
+date-released: "2026-06-13"
+license: MIT
+repository-code: "https://github.com/thabangbaloyi/dnnmcshap"
+preferred-citation:
+  type: thesis
+  title: >-
+    Understanding Health Insurance Cost Predictions Using Deep Neural
+    Networks, Monte Carlo Simulation and Shapley Values
+  authors:
+    - given-names: Thabang Bongani Junior
+      family-names: Baloyi
+  year: 2026
+  institution:
+    name: University of the Free State
+  thesis-type: "MSc Dissertation"
+  department: "Department of Mathematical Statistics and Actuarial Science"

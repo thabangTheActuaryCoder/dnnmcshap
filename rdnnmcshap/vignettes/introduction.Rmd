@@ -1,0 +1,60 @@
+---
+title: "Introduction to rdnnmcshap"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to rdnnmcshap}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+## Overview
+
+The `rdnnmcshap` package provides an R interface to the Python
+`dnnmcshap` package via `reticulate`. It implements a three-stage
+framework for health insurance cost analysis:
+
+1. **DNN Prediction** -- A bias-free funnel Deep Neural Network
+2. **Monte Carlo Simulation** -- Parametric profile generation
+3. **Shapley Attribution** -- SHAP-based feature importance with
+   conditional analysis
+
+## Installation
+
+First install the Python package:
+
+```{r, eval=FALSE}
+reticulate::py_install("dnnmcshap", pip = TRUE)
+```
+Then install the R package:
+
+```{r, eval=FALSE}
+# From source
+install.packages("rdnnmcshap", repos = NULL, type = "source")
+```
+
+## Quick start
+
+```{r}
+library(rdnnmcshap)
+
+# Load a trained checkpoint
+ckpt <- load_checkpoint("path/to/model.pth")
+model <- ckpt$model
+standardiser <- ckpt$standardiser
+
+# Generate MC profiles
+marginals <- estimate_marginals(df_raw)
+df_mc <- generate_mc_profiles(10000L, marginals)
+
+# Encode and score
+X_mc <- encode_profiles(df_mc)
+y_mc <- score_dnn(model, X_mc, standardiser)
+```
