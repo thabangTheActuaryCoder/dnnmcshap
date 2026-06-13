@@ -5,7 +5,7 @@ A three-stage framework combining **Deep Neural Network** prediction,
 understanding health insurance cost drivers.
 
 Developed as part of an MSc dissertation at the University of the Free
-State, supervised by Mr J. Blomerous (FASSA).
+State, supervised by Dr. JM Blomerous (FASSA).
 
 ## Installation
 
